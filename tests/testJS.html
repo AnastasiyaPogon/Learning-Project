@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv">hi!
+        <button>my button</button>
+        <img src="Picture1.png" alt="моя картинка">
+    </div>
+    <script src="testJS_1.js"></script>
+    <script>
+        let divElement = document.getElementById("myDiv")
+
+        //divElement.textContent = '123';
+        divElement.style = "color: red";
+
+        let myButton = document.createElement('button');
+
+        myButton.textContent = "my super button"
+
+        divElement.appendChild(myButton);
+        console.log(myButton)
+    </script>
+</body>
+
+</html>

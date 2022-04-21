@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatar</title>
+    <style>
+      .avatarka {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: -200px 0;
+      }
+      body {
+        margin: 0;
+      }
+
+      .avatar-container:hover {
+        border: 10px solid rgb(37, 95, 92);
+        box-shadow: 10px 10px 20px grey;
+      }
+      .avatar-container {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: border 3s, box-shadow 3s;
+        border: 0px solid rgb(37, 95, 92);
+        box-shadow: none;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="avatar-container"><img class="avatarka" src="ya.JPG"</div>
+  </body>
+</html>

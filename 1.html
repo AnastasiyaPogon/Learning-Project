@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const onButtonClick = () => {
+        const input = document.getElementById("my-input");
+
+        const name = input.value;
+
+        alert(`Hi, ${name}`);
+      };
+
+      const onSecondButtonClick = () => {
+        const header = document.getElementById("my-header");
+
+        header.style.color = "red";
+      };
+
+      function someFunction(event) {
+        const header = document.getElementById("my-header");
+
+        if (event.altKey === true) {
+          header.style.color = "red";
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("my-button")
+          .addEventListener("click", someFunction);
+      });
+
+      console.log(window)
+    </script>
+    <input id="my-input" type="text" placeholder="Enter your name" />
+    <button onclick="onButtonClick()">Greet</button>
+    <div>
+      <h1 id="my-header">Some cool text</h1>
+      <button id="my-button">Make text red</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container{
+      width: 300px;
+      background-color: beige;
+      overflow: hidden;
+      position: relative;
+    }
+    .image {
+      display: block;
+      width: 100%;
+    }
+    .text{
+      width: 100%;
+      margin:0;
+      position:absolute;
+      top: 100%;
+      left:0%;
+      transform: translate(0);
+      transition: transform 1s;
+      text-align: center;
+      color: antiquewhite;
+    }
+    .container:hover .text{
+      transform: translate(0, -200%);
+    }
+
+    </style>
+  <body>
+    <div class="container">
+    <img class="image" src="foggu beach.jpg" alt="foggy beach in Bukit" /> 
+    <p class="text">This is the beach in Bukit.</p>
+    </div>
+  </body>
+</html>

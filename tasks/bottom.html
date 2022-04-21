@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Task Button</title>
+    <style>
+      html {
+        cursor: auto;
+        background-color: #e0e0e0;
+      }
+
+      .button-first,
+      .button-second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #8b8585;
+        text-shadow: 2px 2px 2px #ffffff;
+        height:70px;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  10px 10px 17px #c7c7c7,
+             -10px -10px 17px #f9f9f9;         
+      }
+
+      .button-first:hover,
+      .button-second:hover {
+        cursor: pointer;
+        border-radius: 10px;
+background: #e0e0e0;
+box-shadow: inset 5px 5px 11px #b1b1b1,
+            inset -5px -5px 11px #ffffff;
+      }
+
+      .button-first {
+        transition: background-color 0.8s 0.3s, box-shadow 3s;
+      }
+
+      .button-first:hover {
+        background-color: rgb(233, 142, 210);
+      }
+
+      .button-second {
+        transition: filter 0.8s, box-shadow 3s;
+      }
+
+      .button-second:hover {
+        filter:brightness(100%);
+      }
+      .button-text{ 
+          font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="button-first">
+        <p class="button-text"> <em>Click me</em></p>
+      </button>
+      <br/>
+      <br/>
+      <button class="button-second">
+        <p class="button-text">Click me</p>
+      </button>
+    </div>
+  </body>
+</html>

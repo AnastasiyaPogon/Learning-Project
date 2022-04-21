@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPage</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+        margin: 0;
+      }
+      .page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .whole-upper-zone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(
+          176deg,
+          rgb(218, 228, 240) 14%,
+          rgba(235, 199, 214, 0.973) 65%
+        );
+        height: 80px;
+        padding: 0 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.76);
+        flex-shrink: 0;
+      }
+
+      .upper-zone1 {
+        display: flex;
+        height: 100%;
+        gap: 20px;
+        align-items: center;
+      }
+      .home {
+        font-size: 20px;
+        font-weight: 600;
+        transform:scale(1);
+        transition: transform 2s;
+      }
+      .home:hover{
+        transform:scale(1.2);
+      }
+      .info {
+        font-size: 20px;
+        font-weight: 600;
+        transition: transform 2s ;
+        transform:scale(1);
+    }
+    .info:hover{
+        transform:scale(1.2)
+       
+    }
+      .upper-zone2 {
+        font-size: 20px;
+        font-weight: 600;
+        transition: transform 2s ;
+        transform:scale(1);
+    }
+    .upper-zone2:hover{
+        transform:scale(1.2);
+      }
+      .main-zone {
+        display: flex;
+        height: 100%;
+        min-height: 0%;
+        padding: 20px;
+        box-sizing: border-box;
+        gap: 20px;
+
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(206, 226, 238, 0.144);
+        font-weight: 700;
+        width: 25%;
+        padding-bottom: 10px;
+        overflow: hidden;
+        overflow-y: scroll;
+        text-align: center;
+      }
+      .menu-item {
+        font-size: 15px;
+        padding-top: 5px;
+        opacity: 1;
+        transition: opacity 1.5s;
+      }
+      .menu-item:hover {
+          opacity: 0.4;
+      }
+      .main-zone2 {
+        color: rgba(0, 0, 0, 0.767);
+        font-weight: 700;
+        width: 75%;
+        box-sizing: border-box;
+        padding: 5px;
+        overflow-y: scroll;
+        background-color: rgba(241, 215, 241, 0.192);
+        
+        
+      }
+      .heading {
+        width: 90px;
+        margin: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+        position: sticky;
+        top: 0;
+      }
+      .text {
+        font-size: 13px;
+        height: 3000px;
+        display:block;
+      }
+
+      .end-data {
+        padding: 10px 0 10px 20px;
+        background-color: beige;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80px;
+        box-sizing: border-box;
+        flex-shrink: 0;}
+
+        ::-webkit-scrollbar{
+          width: 20px;
+        }
+        ::-webkit-scrollbar-track{
+          background-color: rgb(83, 58, 58);
+          box-shadow: inset 0 0 5px black;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+          background-color: rgba(250, 235, 215, 0.699);
+          border-radius: 12px;
+        }
+      }
+    </style>
+    <div class="page">
+      <div class="whole-upper-zone">
+        <div class="upper-zone1">
+          <div class="home">HOME</div>
+          <div class="info">INFO</div>
+        </div>
+        <div class="upper-zone2">CONTACTS</div>
+      </div>
+
+      <div class="main-zone">
+        <div class="menu">
+          <div class="menu-item">Sahelanthropus tchadensis</div>
+          <div class="menu-item">Orrorin tugenensis</div>
+          <div class="menu-item">Ardipithecus kadabba</div>
+          <div class="menu-item">Ardipithecus ramidus</div>
+          <div class="menu-item">Australopithecus anamensis</div>
+          <div class="menu-item">Australopithecus afarensis</div>
+          <div class="menu-item">Kenyanthropus platyops</div>
+          <div class="menu-item">Australopithecus africanus</div>
+          <div class="menu-item">Australopithecus bahrelghazali</div>
+          <div class="menu-item">Australopithecus garhi</div>
+          <div class="menu-item">Australopithecus sediba</div>
+          <div class="menu-item">Paranthropus aethiopicus</div>
+          <div class="menu-item">Paranthropus boisei</div>
+          <div class="menu-item">Paranthropus robustus</div>
+          <div class="menu-item">Homo rudolfensis</div>
+          <div class="menu-item">Homo habilis</div>
+          <div class="menu-item">Homo ergaster</div>
+          <div class="menu-item">Homo erectus</div>
+          <div class="menu-item">Homo heidelbergensis</div>
+
+          <div class="menu-item">Homo helmei</div>
+          <div class="menu-item">Homo neanderthalensis</div>
+          <div class="menu-item">Homo floresiensis</div>
+          <div class="menu-item">Homo sapiens sapiens</div>
+        </div>
+
+        <div div class="main-zone2">
+          <div class="heading">Hominidae</div>
+          <span class="text">
+            The Hominidae, whose members are known as great apes[note 1] or
+            hominids, are a taxonomic family of primates that includes eight
+            extant species in four genera: Pongo (the Bornean, Sumatran and
+            Tapanuli orangutan); Gorilla (the eastern and western gorilla); Pan
+            (the chimpanzee and the bonobo); and Homo, of which only modern
+            humans remain. Several revisions in classifying the great apes have
+            caused the use of the term "hominid" to vary over time. The original
+            meaning of "hominid" referred only to humans (Homo) and their
+            closest extinct relatives. However, by the 1990s humans, apes, and
+            their ancestors were considered to be "hominids".
+          
+          </span>
+        </div>
+        </div>
+       <footer class="end-data">
+        <span class="products"> PRODUCTS </span>
+        <span class="Q"> questions </span>
+      </footer>
+    </div>
+     
+    </div>
+  </body>
+</html>
