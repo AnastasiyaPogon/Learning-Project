@@ -33,13 +33,13 @@
       input {
         background-color: hsla(32, 42%, 72%, 0.402);
         border: 1px solid rgba(243, 216, 216, 0.667);
+        height: 30px;
       }
 
       input,
       .result {
         text-align: center;
 
-        height: 30px;
         padding: 10px;
       }
       input,
@@ -60,6 +60,14 @@
       }
 
       .result {
+        margin: 0;
+        overflow: auto;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
         margin: 0;
       }
     </style>
@@ -84,9 +92,9 @@
         <button class="sum" id="sumid">summa</button>
         <button class="reset" id="resetid">reset</button>
       </div>
-      <p class="result with-background" id="resultvalue">
+      <div class="result with-background" id="resultvalue">
         результат суммы чисел
-      </p>
+      </div>
     </div>
     <script>
       const summa_button = document.getElementById("sumid");
@@ -95,11 +103,18 @@
 
       function fun() {
         if (input_first.value !== "" && input_second.value !== "") {
-          document.getElementById("resultvalue").textContent =
+          const p = document.createElement("p");
+          p.textContent =
             Number(input_first.value) + Number(input_second.value);
+          document
+            .getElementById("resultvalue")
+            .insertBefore(p, document.getElementById("resultvalue").firstChild);
         } else {
-          document.getElementById("resultvalue").textContent =
-            "введите два числа";
+          const p = document.createElement("p");
+          p.textContent = "введите два числа";
+          document
+            .getElementById("resultvalue")
+            .insertBefore(p, document.getElementById("resultvalue").firstChild);
         }
       }
 
