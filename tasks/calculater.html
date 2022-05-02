@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 14px;
+      }
+      .container,
+      .component,
+      .button-area {
+        display: flex;
+        gap: 15px;
+      }
+      .component,
+      .container {
+        flex-direction: column;
+      }
+      .container {
+        width: 185px;
+      }
+      input,
+      .result,
+      button {
+        border-radius: 5px;
+      }
+
+      .with-background,
+      input {
+        background-color: hsla(32, 42%, 72%, 0.402);
+        border: 1px solid rgba(243, 216, 216, 0.667);
+      }
+
+      input,
+      .result {
+        text-align: center;
+
+        height: 30px;
+        padding: 10px;
+      }
+      input,
+      button {
+        font-family: inherit;
+        font-size: inherit;
+      }
+      button {
+        height: 30px;
+        padding: 5px;
+        transition: opacity 1s;
+        box-shadow: 2px 2px rgba(212, 206, 198, 0.598);
+        width: 100%;
+      }
+      button:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      .result {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="component">
+        <input
+          class="first-number"
+          type="number"
+          id="input1"
+          placeholder="введите первое число"
+        />
+        <input
+          class="second-number"
+          type="number"
+          id="input2"
+          placeholder="введите второе число"
+        />
+      </div>
+      <div class="button-area">
+        <button class="sum" id="sumid">summa</button>
+        <button class="reset" id="resetid">reset</button>
+      </div>
+      <p class="result with-background" id="resultvalue">
+        результат суммы чисел
+      </p>
+    </div>
+    <script>
+      const summa_button = document.getElementById("sumid");
+      const input_first = document.getElementById("input1");
+      const input_second = document.getElementById("input2");
+
+      function fun() {
+        if (input_first.value !== "" && input_second.value !== "") {
+          document.getElementById("resultvalue").textContent =
+            Number(input_first.value) + Number(input_second.value);
+        } else {
+          document.getElementById("resultvalue").textContent =
+            "введите два числа";
+        }
+      }
+
+      /* 1 вариант:  summa_button.addEventListener("click", fun); */
+
+      input_first.addEventListener("input", fun);
+      input_second.addEventListener("input", fun);
+
+      function fun1() {
+        document.getElementById("resultvalue").textContent = "";
+        input_first.value = "";
+        input_second.value = "";
+      }
+
+      document.getElementById("resetid").addEventListener("click", fun1);
+
+      console.log(document.getElementById("resultvalue").value);
+    </script>
+  </body>
+</html>
